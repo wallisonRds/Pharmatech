@@ -1,0 +1,98 @@
+name: "⚙ Tarefa Técnica"
+description: "Trabalho técnico como refatoração, melhorias de performance ou mudanças arquiteturais"
+title: "[TASK] "
+labels: ["task"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙ Tarefa Técnica
+
+        Use este template para registrar **trabalhos técnicos** relacionados a melhorias internas no Pharmatech.
+
+        Exemplos incluem:
+        - Refatoração de código (limpeza de lógica PHP/JS)
+        - Otimização de performance (consultas SQL)
+        - Organização da estrutura de pastas
+        - Melhorias na arquitetura do sistema
+        - Mudanças de infraestrutura ou banco de dados
+        - Atualização de dependências
+
+        Estas tarefas geralmente **não introduzem novas funcionalidades**, mas melhoram a manutenção, estabilidade ou escalabilidade do projeto.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📌 Contexto
+      description: Descreva a necessidade técnica ou o problema que motiva esta tarefa.
+      placeholder: |
+        Exemplo:
+        O módulo de autenticação cresceu significativamente e agora contém lógica duplicada,
+        tornando-o difícil de manter e testar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objetivo
+      description: Explique claramente o que deve ser alcançado após a conclusão desta tarefa.
+      placeholder: |
+        Exemplo:
+        Refatorar o módulo de autenticação para separar responsabilidades e melhorar a legibilidade do código.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 📦 Escopo
+      description: Liste as principais atividades técnicas incluídas nesta tarefa.
+      placeholder: |
+        Exemplo:
+        - Extrair lógica de autenticação para serviços dedicados
+        - Remover código duplicado nas validações de login
+        - Melhorar a estrutura de pastas do backend
+        - Atualizar os testes relacionados
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_requirements
+    attributes:
+      label: 🧰 Requisitos Técnicos
+      description: Liste tecnologias, dependências ou restrições envolvidas.
+      placeholder: |
+        Exemplo:
+        - Atualizar dependências para as versões estáveis mais recentes
+        - Manter compatibilidade com a API atual
+        - Seguir os padrões de arquitetura da Nexus-Dev
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 🔍 Impacto
+      description: Descreva como esta tarefa pode afetar o sistema.
+      placeholder: |
+        Exemplo:
+        - Melhora a manutenibilidade do código
+        - Reduz o débito técnico
+        - Melhora a performance nos fluxos de login e estoque
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: ✔ Critérios de Aceite
+      description: Condições necessárias para considerar esta tarefa concluída.
+      options:
+        - label: Implementação concluída de acordo com o escopo
+        - label: Código revisado e aprovado pela equipe Nexus-Dev
+        - label: Mudanças testadas em ambiente de desenvolvimento
+        - label: O código segue os padrões e convenções do projeto
+        - label: Testes relacionados foram atualizados ou adicionados se necessário
