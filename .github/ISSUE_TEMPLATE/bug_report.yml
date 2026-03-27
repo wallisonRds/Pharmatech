@@ -1,0 +1,104 @@
+name: "🐞 Relato de Bug"
+description: "Informe um problema, comportamento inesperado ou erro no sistema"
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Relato de Bug
+        Obrigado por ajudar a melhorar o sistema! 
+        Por favor, forneça o máximo de detalhes possível para que possamos reproduzir e corrigir o erro rapidamente.
+
+        **Dicas para um bom relato:**
+        - Seja específico e claro
+        - Inclua os passos para reproduzir o erro (ex: qual tela acessou)
+        - Anexe prints ou logs se possível
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: 📋 Descrição do Problema
+      description: Descreva claramente o erro que você encontrou.
+      placeholder: |
+        Exemplo:
+        Ao tentar cadastrar um novo lote de medicamento, o sistema exibe erro 500 em vez de salvar os dados.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: 🔁 Passos para Reproduzir
+      description: Como podemos chegar ao erro?
+      placeholder: |
+        1. Acesse a tela de Inventário
+        2. Clique em "Novo Lote"
+        3. Preencha a data de validade com um formato inválido
+        4. Clique em "Salvar" e observe o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: ✅ Comportamento Esperado
+      description: O que deveria acontecer se a funcionalidade estivesse correta?
+      placeholder: |
+        Exemplo:
+        O sistema deveria validar a data e exibir uma mensagem de erro amigável ao usuário.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: ❌ Comportamento Atual
+      description: O que aconteceu de errado?
+      placeholder: |
+        Exemplo:
+        A tela fica branca e o console do navegador mostra um erro de "undefined".
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 📎 Evidências (Prints, Logs, Erros do PHP/SQL)
+      description: Cole aqui prints da tela ou mensagens de erro do log do servidor.
+      placeholder: |
+        Exemplo:
+        - Print da tela de erro
+        - Log do erro SQL
+        - Saída do console do navegador
+
+  - type: input
+    id: environment
+    attributes:
+      label: 💻 Ambiente de Teste
+      description: Em qual navegador ou sistema o erro ocorreu?
+      placeholder: |
+        Exemplo: Chrome no Windows 11 / XAMPP (PHP 8.2)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 🧩 Contexto Adicional
+      description: Alguma outra informação importante?
+      placeholder: |
+        Exemplo: Isso começou a acontecer depois que alteramos a lógica de alertas de validade.
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: ✔ Critérios de Aceite
+      description: Condições para considerar este bug resolvido.
+      options:
+        - label: O bug foi corrigido no código-fonte
+        - label: A correção foi testada no ambiente de desenvolvimento
+        - label: A alteração não gerou erros em outras partes do estoque
+        - label: Logs de erro foram verificados e limpos
