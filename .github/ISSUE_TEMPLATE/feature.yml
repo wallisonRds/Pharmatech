@@ -1,0 +1,99 @@
+name: "✨ Sugestão de Funcionalidade"
+description: "Sugira uma nova funcionalidade ou melhoria para o Pharmatech"
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Sugestão de Funcionalidade
+
+        Obrigado por sugerir uma nova ideia! 
+
+        As sugestões ajudam a evolução do projeto e o tornam mais útil para todos da Nexus-Dev.
+
+        **Antes de enviar:**
+        - Verifique se já não existe uma sugestão parecida aberta
+        - Forneça detalhes claros sobre o problema e a solução proposta
+        - Inclua exemplos ou referências do Figma quando possível
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📌 Contexto
+      description: Descreva o problema ou a oportunidade que motivou esta sugestão.
+      placeholder: |
+        Exemplo:
+        Atualmente os usuários não conseguem exportar relatórios de validade em PDF, o que dificulta a conferência física nas prateleiras.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objetivo
+      description: Explique claramente o que deve ser implementado.
+      placeholder: |
+        Exemplo:
+        Adicionar um botão de "Gerar PDF" na tela de alertas de vencimento, listando os medicamentos próximos da validade.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 📦 Escopo
+      description: Liste as principais funcionalidades ou partes incluídas nesta entrega.
+      placeholder: |
+        Exemplo:
+        - Botão de exportar na página de relatórios
+        - Geração de arquivo PDF formatado
+        - Filtro por categoria de medicamento no relatório
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_requirements
+    attributes:
+      label: ⚙ Requisitos Técnicos
+      description: Liste requisitos, dependências ou detalhes de implementação (PHP/JS/SQL).
+      placeholder: |
+        Exemplo:
+        - Integração com a biblioteca Dompdf ou similar no PHP
+        - Criação de uma rota específica no backend para o download
+        - Atualização da UI para incluir o ícone de exportação
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 Referências
+      description: Adicione links de issues relacionadas, designs no Figma ou exemplos externos.
+      placeholder: |
+        Exemplo:
+        - Issue relacionada: #42
+        - Link do Mockup no Figma
+        - Referência de layout: https://exemplo.com/docs/export
+
+  - type: textarea
+    id: value
+    attributes:
+      label: 💡 Valor / Impacto
+      description: Explique como isso beneficiará o projeto ou o usuário final.
+      placeholder: |
+        Exemplo:
+        Esta funcionalidade permitirá que os farmacêuticos façam a checagem manual do estoque sem depender de um computador o tempo todo.
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: ✔ Critérios de Aceite
+      description: Condições necessárias para considerar esta funcionalidade concluída.
+      options:
+        - label: Funcionalidade implementada conforme o escopo descrito
+        - label: Implementação testada em ambiente de desenvolvimento
+        - label: Sem introdução de bugs em funcionalidades existentes
+        - label: Documentação e manual do usuário atualizados
