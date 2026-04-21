@@ -1,0 +1,114 @@
+.login-container {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  display: block;
+}
+
+.forms-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 110px 0px 110px;
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: var(--font-advent);
+      font-weight: bold;
+      font-size: 4rem;
+      color: var(--primary-color);
+      line-height: 0.875;
+    }
+    p {
+      font-family: var(--font-roboto);
+      font-weight: normal;
+      font-size: 0.875rem;
+      color: #434141;
+      margin-bottom: 3.75rem;
+    }
+
+    .input-wrapper label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.75rem;
+
+      /* Esconde o checkbox padrão */
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Cria o container do novo checkbox */
+      .checkmark {
+        display: inline-block;
+        height: 20px; /* Tamanho personalizado */
+        width: 20px; /* Tamanho personalizado */
+        background-color: var(--input-secondary);
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        margin-right: 12px;
+        vertical-align: middle;
+        position: relative;
+        transition: all 0.2s;
+      }
+
+      /* Quando passar o mouse */
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: var(--accent-green);
+      }
+      /* Quando estiver marcado */
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: var(--accent-green);
+        border-color: var(--accent-green);
+      }
+    }
+    .forgot span {
+      color: var(--primary-color);
+      font-family: var(--font-roboto);
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #4370c8;
+      }
+    }
+  }
+}
