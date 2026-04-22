@@ -13,10 +13,53 @@
         <div class="main-wrapper">
             <?php include_once __DIR__ . "/../src/components/header.inc.php"; ?>
             <main class="content-area">
-            
+                <div class="mercadoria-group">
+                    <div class="mercadoria-items">
+                        <img src="assets/icons/Box.svg" alt="imagem de uma caixa">
+                        <span class="mercadoria-title">Entrada de Mercadorias</span>
+                    </div>
+                    <span class="mercadoria-description">Registre a entrada de mercadoria no estoque!</span>
+                </div>
+
+                <div class="mercadoria-container-alinhamento">
+                    <div class="mercadoria-container">
+                        <h1>Nova Entrada</h1>
+                        <div class="container-grid">
+                            <div class="grid-item">
+                                <span>Produto</span>
+                                <input type="text" placeholder="Nome do produto">
+                            </div>
+
+                            <div class="grid-item">
+                                <span>Quantidade</span>
+                                <input type="number" placeholder="0"> 
+                            </div>
+
+                            <div class="grid-item">
+                                <span>Nota Fiscal</span>
+                                <input type="text" placeholder="NF-00000">
+                            </div>
+
+                            <div class="grid-item">
+                                <span>Lote</span>
+                                <input type="text" placeholder="LT-0000-000"> 
+                            </div>
+
+                            <div class="grid-item grid-item--full">
+                                <span>Fornecedor</span>
+                                <select>
+                                    <option value="">Selecione o fornecedor</option>
+                                </select>
+                            </div>            
+                        </div>
+
+                        <div class="mercadoria-footer">
+                             <button class="btn">+ Registrar entrada</button>
+                        </div>
+                    </div>
+                </div>  
             </main>
         </div>
-    </div>
     </div>
 </body>
 </html>
