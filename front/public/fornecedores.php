@@ -8,74 +8,77 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-    <?php include('../src/components/sidebar.inc.php'); ?>
+    <div class="layout-container">
+        <?php include_once __DIR__ . "/../src/components/sidebar.inc.php"; ?>
+        <div class="main-wrapper">
+            <?php include_once __DIR__ . "/../src/components/header.inc.php"; ?>
+            <main class="content-area">
+            <div class="fornecedor-group">
+                <span class="fornecedor-title">Fornecedores</span>
+                <button class="btn">+ Novo Fornecedor</button>
+            </div>
+        <div class="fornecedor-container-alinhamento">
+        <div class="fornecedor-container">
+            <div class="fornecedor-search">
+                <img src="assets/icons/search.svg" alt="buscar">
+                <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
+            </div>
 
-    <main>
-    <div class="fornecedor-group">
-        <span class="fornecedor-title">Fornecedores</span>
-        <button class="btn">+ Novo Fornecedor</button>
-    </div>
+            <table class="fornecedor-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Polo</th>
+                        <th>Razão Social</th>
+                        <th>Nome Fantasia</th>
+                        <th>CNPJ</th>
+                        <th>Localidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fabricante</td>
+                        <td>PharmaBrasil Ltda</td>
+                        <td><strong>PharmaBR</strong></td>
+                        <td>12.38.678/0001-01</td>
+                        <td>São Paulo - SP</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Distribuidor</td>
+                        <td>MedDistrubi S.A</td>
+                        <td><strong>MedDIST</strong></td>
+                        <td>98.765.432/001-02</td>
+                        <td>Rio de Janeiro - RJ</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fabricante</td>
+                        <td>BioSaúde Indústria</td>
+                        <td><strong>BioSaúde</strong></td>
+                        <td>11.222.333/001-03</td>
+                        <td>Belo Horizonte - MG</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Distribuidor</td>
+                        <td>Saúde Total Logistica</td>
+                        <td><strong>SaudeLog</strong></td>
+                        <td>44.555.666/001-04</td>
+                        <td>Curitiba - PR</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <div class="fornecedor-container">
-        <div class="fornecedor-search">
-            <img src="assets/icons/search.svg" alt="buscar">
-            <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
+            <div class="fornecedor-pagination">
+                <button class="pagination-btn">Anterior</button>
+                <span class="pagination-current">1</span>
+                <button class="pagination-btn">Próximo</button>
+            </div>
+        </main>
         </div>
-
-        <table class="fornecedor-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Polo</th>
-                    <th>Razão Social</th>
-                    <th>Nome Fantasia</th>
-                    <th>CNPJ</th>
-                    <th>Localidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Fabricante</td>
-                    <td>PharmaBrasil Ltda</td>
-                    <td><strong>PharmaBR</strong></td>
-                    <td>12.38.678/0001-01</td>
-                    <td>São Paulo - SP</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Distribuidor</td>
-                    <td>MedDistrubi S.A</td>
-                    <td><strong>MedDIST</strong></td>
-                    <td>98.765.432/001-02</td>
-                    <td>Rio de Janeiro - RJ</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Fabricante</td>
-                    <td>BioSaúde Indústria</td>
-                    <td><strong>BioSaúde</strong></td>
-                    <td>11.222.333/001-03</td>
-                    <td>Belo Horizonte - MG</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Distribuidor</td>
-                    <td>Saúde Total Logistica</td>
-                    <td><strong>SaudeLog</strong></td>
-                    <td>44.555.666/001-04</td>
-                    <td>Curitiba - PR</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="fornecedor-pagination">
-            <button class="pagination-btn">Anterior</button>
-            <span class="pagination-current">1</span>
-            <button class="pagination-btn">Próximo</button>
         </div>
     </div>
-</main>
-    
 </body>
 </html>

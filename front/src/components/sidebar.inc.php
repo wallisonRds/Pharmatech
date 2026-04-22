@@ -15,19 +15,19 @@
             <img src="assets/logo-sidebar.svg" alt="logo pharmatech">
         </div>
         <ul class="navegacao-menu">
-            <li><a href="home.php">
+            <li><a href="/home.php">
             <img src="assets/icons/inicio.svg" alt="icone de inicio">
             Início</a></li>
-            <li><a href="produtos.php">
+            <li><a href="/produtos.php">
              <img src="assets/icons/produtos.svg" alt="icone de produtos">    
             Produtos</a></li>
-            <li><a href="movimentacoes.php">
+            <li><a href="/movimentacoes.php">
              <img src="assets/icons/movimentacoes.svg" alt="icone de movimentacoes">
             Movimentações</a></li>
-            <li><a href="fornecedores.php">
+            <li><a href="/fornecedores.php">
              <img src="assets/icons/fornecedor.svg" alt="icone de fornecedores">
             Fornecedores</a></li>
-            <li><a href="entrada.php">
+            <li><a href="/entrada.php">
              <img src="assets/icons/entrada.svg" alt="icone de entrada de mercadorias">
             Entrada de mercadorias</a></li>
         </ul>
