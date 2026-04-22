@@ -14,6 +14,7 @@
 
   --text-primary: #ffffff;
   --text-secondary: #6e6f70;
+  --text-tertiary: #1e1e1e;
 
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto", sans-serif;
@@ -29,4 +30,5 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
