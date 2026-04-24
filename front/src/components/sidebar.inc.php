@@ -17,19 +17,19 @@
         <ul class="navegacao-menu">
             <li><a href="/home.php">
             <img src="assets/icons/inicio.svg" alt="icone de inicio">
-            Início</a></li>
+            <span>Início</span></a></li>
             <li><a href="/produtos.php">
              <img src="assets/icons/produtos.svg" alt="icone de produtos">    
-            Produtos</a></li>
+            <span>Produtos</span></a></li>
             <li><a href="/movimentacoes.php">
              <img src="assets/icons/movimentacoes.svg" alt="icone de movimentacoes">
-            Movimentações</a></li>
+            <span>Movimentações</span></a></li>
             <li><a href="/fornecedores.php">
              <img src="assets/icons/fornecedor.svg" alt="icone de fornecedores">
-            Fornecedores</a></li>
+            <span>Fornecedores</span></a></li>
             <li><a href="/entrada.php">
              <img src="assets/icons/entrada.svg" alt="icone de entrada de mercadorias">
-            Entrada de mercadorias</a></li>
+            <span>Entrada de Mercadorias</span></a></li>
         </ul>
     </nav>
 </body>

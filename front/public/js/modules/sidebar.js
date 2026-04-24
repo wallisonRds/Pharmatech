@@ -10,7 +10,6 @@ export default function setupActiveMenu() {
 
     // 2. Ouve o clique
     link.addEventListener("click", function (event) {
-      event.preventDefault();
       links.forEach((l) => l.classList.remove("active"));
       this.classList.add("active");
     });
