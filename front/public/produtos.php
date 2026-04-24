@@ -15,7 +15,7 @@
             <main class="content-area">
                 <div class="fornecedor-group">
                     <span class="fornecedor-title">Produtos</span>
-                    <button class="btn">+ Novo Produto</button>
+                    <button class="btn" data-modal="abrir">+ Novo Produto</button>
                 </div>
                 <section class="produtos">
                  <div class="produtos-container">
@@ -132,6 +132,45 @@
         </div>
         </div>
     </div>
+
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+        <div class="input-modal">
+            <div class="input-wrapper">
+                <label for="name">Nome</label>
+                <input type="text" for="name" id="name" placeholder="Ex: Amoxicilina 500mg"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="sku">SKU</label>
+                <input type="text" for="sku" id="sku" placeholder="ex: AMX-500"/>
+            </div>
+               <div class="input-wrapper">
+                <label for="categoria">Categoria</label>
+                <input type="text" for="categoria" id="categoria" placeholder="Selecione"/>
+            </div>
+               <div class="input-wrapper">
+                <label for="preco">Preço</label>
+                <input type="text" for="preco" id="preco" placeholder="R$ 0,00"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="estoque">Estoque inicial</label>
+                <input type="number" for="estoque" id="estoque" placeholder="0"/>
+            </div>
+               <div class="input-wrapper">
+                <label for="status">status</label>
+                <input type="text" for="status" id="status" placeholder="Ativo"/>
+            </div>
+        </div>
+          <div class="btn-modal">
+            <button class="pagination-btn" type="submit">Cancelar</button>
+            <button class="btn" type="submit">Salvar produto</button>
+          </div>
+        
+        </form>
+      </div>
+    </section>
     <script type="module" src="/js/main.js"></script>
 </body>
 </html>
