@@ -19,7 +19,7 @@
             </div>
         <div class="fornecedor-container-alinhamento">
         <div class="fornecedor-container">
-            <div class="fornecedor-search">
+            <div class="input-search">
                 <img src="assets/icons/search.svg" alt="buscar">
                 <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
             </div>
@@ -71,11 +71,7 @@
                 </tbody>
             </table>
 
-            <div class="fornecedor-pagination">
-                <button class="pagination-btn">Anterior</button>
-                <span class="pagination-current">1</span>
-                <button class="pagination-btn">Próximo</button>
-            </div>
+         <?php include_once __DIR__ . "/../src/components/pagination.inc.php"; ?>
         </main>
         </div>
         </div>

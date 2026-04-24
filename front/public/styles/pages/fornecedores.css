@@ -27,13 +27,15 @@
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   border: 2px solid #e1e7ef;
   border-radius: 8px;
   min-height: 774px;
   width: 100%;
+  padding-top: 30px;
 }
 
-.fornecedor-search {
+.input-search {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -41,12 +43,11 @@
   border-radius: 8px;
   padding: 10px 16px;
   width: 509px;
-  margin-top: 30px;
   margin-bottom: 40px;
-  margin-left: 40.23px;
+  margin-left: 40px;
 }
 
-.fornecedor-search input {
+.input-search input {
   border: none;
   background: transparent;
   outline: none;
@@ -79,37 +80,4 @@
 
 .fornecedor-table tbody tr:last-child td {
   border-bottom: none;
-}
-
-.fornecedor-pagination {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  margin-right: 21px;
-  margin-bottom: 38px;
-}
-
-.pagination-btn {
-  background: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-family: var(--font-poppins);
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.pagination-btn:hover {
-  background-color: #f0f0f0;
-}
-
-.pagination-current {
-  background-color: #1a2f5e;
-  color: white;
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-size: 13px;
-  font-family: var(--font-poppins);
 }

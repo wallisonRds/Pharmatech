@@ -63,7 +63,7 @@
                     </div>
                 </section>
 
-                <section class="produtos-recentes">
+                <section class="produtos">
                     <div class="produtos-container">
                         <div class="table-header">
                             <h2>Produtos Recentes</h2>
