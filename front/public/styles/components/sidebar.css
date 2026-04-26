@@ -11,6 +11,10 @@
     height: 45px;
     margin-bottom: 90px;
     margin-top: 10px;
+
+    &:last-child {
+      display: none;
+    }
   }
 
   .navegacao-menu {
@@ -45,4 +49,39 @@
     opacity: 26%;
     transition: 0.3s ease-in;
   }
+}
+
+.sidebar-menu.collapsed {
+  width: 80px;
+  min-width: 80px;
+}
+
+/* 3. Esconder os textos e a logo quando estiver colapsado */
+.sidebar-menu.collapsed span {
+  display: none;
+}
+
+.sidebar-menu.collapsed .navegacao-menu li a.active::before {
+  width: 40px;
+  transition: 0s ease-in;
+}
+
+.sidebar-menu.collapsed .logo-sidebar img:first-child {
+  display: none;
+}
+
+.sidebar-menu.collapsed .logo-sidebar img:last-child {
+  display: block;
+  width: 40px; /* Tamanho de um ícone */
+  height: auto;
+  margin-bottom: 50px; /* Reduzi a margem para ficar proporcional */
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+/* logo centralizada no estado colapsado */
+.sidebar-menu.collapsed .logo-sidebar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

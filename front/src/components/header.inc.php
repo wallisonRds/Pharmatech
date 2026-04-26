@@ -7,7 +7,7 @@
 </head>
 <body>       
     <header>
-    <img src="assets/icons/sidebar.svg" alt="siderbar icon">
+        <img id="toggle-sidebar" src="assets/icons/sidebar.svg" alt="siderbar icon">
     <div class="input-header"> 
         <input type="text" placeholder="Buscar Produtos, Fornecedores...">
     </div>
@@ -17,5 +17,6 @@
         <img src="assets/icons/Profile.svg" alt="icone de perfil">
     </div>
     </header>
+    
 </body>
 </html>

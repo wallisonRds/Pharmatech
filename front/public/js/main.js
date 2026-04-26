@@ -1,9 +1,9 @@
 import setupActiveMenu from "./modules/sidebar.js";
 import initModal from "./modules/modal.js";
-
-setupActiveMenu();
-initModal();
+import sidebarToggle from "./modules/sidebarToggle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   setupActiveMenu();
+  initModal();
+  sidebarToggle();
 });

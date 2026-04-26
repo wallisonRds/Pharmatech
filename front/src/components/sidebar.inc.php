@@ -13,6 +13,7 @@
     <nav class="sidebar-menu">
         <div class="logo-sidebar">
             <img src="assets/logo-sidebar.svg" alt="logo pharmatech">
+            <img src="assets/logo-nome.svg" alt="logo pharmatech versao menor">
         </div>
         <ul class="navegacao-menu">
             <li><a href="/home.php">
