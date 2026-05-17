@@ -1,3 +1,8 @@
+<?php 
+    require_once __DIR__ . '/../../back/config/trava.php'; 
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +21,7 @@
             <?php include_once __DIR__ . "/../src/components/header.inc.php"; ?>
             <main class="content-area">
                 <header>
-                    <h1>Seja bem vindo(a), Carlos Ítalo!</h1>
+                    <h1>Seja bem-vindo(a), <?= $_SESSION['usuario_nome'] ?>!</h1>
                 </header>
                 <section class="cards">
                     <div class="card">

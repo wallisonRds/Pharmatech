@@ -16,7 +16,7 @@
                 <img src="assets/Logo-cadastro.svg" alt="logo Pharmatech">
             </div>
             <p>Crie sua conta</p>
-          <form action="processa_login.php" method="POST" class="form-cadastro"> 
+          <form action="/PHARMATECH_PROJETO/Pharmatech/back/public/index.php?acao=registrar" method="POST" class="form-cadastro"> 
          
             <div class="input-wrapper">
                 <label for="name"></label>

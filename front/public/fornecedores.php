@@ -1,3 +1,7 @@
+<?php 
+    require_once __DIR__ . '/../../back/config/trava.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,6 +125,5 @@
         </form>
       </div>
     </section>
-    <script type="module" src="/js/main.js"></script>
-</body>
+    <script type="module" src="./js/main.js"></script>
 </html>

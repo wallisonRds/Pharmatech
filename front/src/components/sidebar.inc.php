@@ -17,34 +17,34 @@
         </div>
 
         <ul class="navegacao-menu">
-            <li><a href="/home.php">
+            <li><a href="./home.php">
             <img src="assets/icons/inicio.svg" alt="icone de inicio">
             <span>Início</span></a></li>
-            <li><a href="/produtos.php">
+            <li><a href="./produtos.php">
              <img src="assets/icons/produtos.svg" alt="icone de produtos">    
             <span>Produtos</span></a></li>
-            <li><a href="/movimentacoes.php">
+            <li><a href="./movimentacoes.php">
              <img src="assets/icons/movimentacoes.svg" alt="icone de movimentacoes">
             <span>Movimentações</span></a></li>
-            <li><a href="/fornecedores.php">
+            <li><a href="./fornecedores.php">
              <img src="assets/icons/fornecedor.svg" alt="icone de fornecedores">
             <span>Fornecedores</span></a></li>
-            <li><a href="/entrada.php">
+            <li><a href="./entrada.php">
              <img src="assets/icons/entrada.svg" alt="icone de entrada de mercadorias">
             <span>Entrada de Mercadorias</span></a></li>     
         </ul>  
         
         
         <div class="footer-sidebar">
-            <a href="/configuracoes.php">
+            <a href="./configuracoes.php">
                 <img src="assets/icons/settings.svg" alt="icone de inicio">
                 <span>Configurações de perfil</span>
             </a>   
 
-            <a class="logout" href="/login.php">
-                <img src="assets/icons/logout.svg" alt="icone de inicio">
+            <a class="logout" href="/PHARMATECH_PROJETO/Pharmatech/front/public/logout.php">
+                <img src="assets/icons/logout.svg" alt="icone de logout">
                 <span>Sair</span>
-            </a>  
+            </a> 
         </div>
     </nav>
 </body>

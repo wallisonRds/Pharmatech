@@ -16,7 +16,7 @@
             <img src="assets/logo-pharmatech.svg" alt="Logo Pharmatech">
         </div> 
 
-        <form action="processa_login.php" method="POST" class="forms-login">
+        <form action="/PHARMATECH_PROJETO/Pharmatech/back/public/index.php?acao=login" method="POST" class="forms-login">
             <div class="form-container">
             <h1>Pharmatech</h1>
             <p>Onde cada miligrama conta</p>
