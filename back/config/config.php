@@ -1,15 +1,14 @@
 <?php
 
-define('URL_FRONT', 'http://localhost/Pharmatech/front/src/styles/pages');  
-define('URL_BACK', 'http://localhost/Pharmatech/back/public/index.php');  
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root'); 
+define('DB_PASS', '');     
+define('DB_NAME', 'pharmatech'); 
 
-function conectarBanco() {
-    try {
-        $db = new PDO('sqlite:' . __DIR__ . '/../../database/database.sqlite');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $db->exec("PRAGMA foreign_keys = ON");
-        return $db;
-    } catch (PDOException $e) {
-        die('Erro ao conectar no banco: ' . $e->getMessage());
-    }
+try {
+    $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro ao conectar no banco: " . $e->getMessage());
 }
+?>
