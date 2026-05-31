@@ -30,7 +30,7 @@
                     <div class="fornecedor-container">
                         <div class="input-search">
                             <img src="assets/icons/search.svg" alt="buscar">
-                            <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
+                            <input type="text" id="busca-fornecedor" placeholder="Buscar Fornecedor ou CNPJ...">
                         </div>
 
                         <table class="fornecedor-table">
@@ -114,5 +114,7 @@
         </form>
       </div>
     </section>
+
     <script type="module" src="./js/main.js"></script>
+    
 </html>
