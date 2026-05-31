@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../app/controllers/authController.php';
+require_once __DIR__ . '/../app/controllers/fornecedorController.php'; 
 
 $acao = $_GET['acao'] ?? '';
 
@@ -12,6 +13,11 @@ switch ($acao) {
     case 'login':
         $auth = new AuthController($pdo);
         $auth->login();
+        break;
+
+    case 'cadastrar_fornecedor':                        
+        $fornecedor = new FornecedorController($pdo);
+        $fornecedor->cadastrar();
         break;
 
     default:

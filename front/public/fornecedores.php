@@ -1,5 +1,10 @@
 <?php 
-    require_once __DIR__ . '/../../back/config/trava.php'; 
+    require_once __DIR__ . '/../../back/config/trava.php';
+    require_once __DIR__ . '/../../back/config/config.php';
+    require_once __DIR__ . '/../../back/app/models/fornecedor.php';
+
+    $fornecedorModel = new Fornecedor($pdo);
+    $fornecedores = $fornecedorModel->listar();
 ?>
 
 <!DOCTYPE html>
@@ -17,94 +22,78 @@
         <div class="main-wrapper">
             <?php include_once __DIR__ . "/../src/components/header.inc.php"; ?>
             <main class="content-area">
-            <div class="fornecedor-group">
-                <span class="fornecedor-title">Fornecedores</span>
-                <button class="btn" data-modal="abrir">+ Novo Fornecedor</button>
-            </div>
-        <div class="fornecedor-container-alinhamento">
-        <div class="fornecedor-container">
-            <div class="input-search">
-                <img src="assets/icons/search.svg" alt="buscar">
-                <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
-            </div>
+                <div class="fornecedor-group">
+                    <span class="fornecedor-title">Fornecedores</span>
+                    <button class="btn" data-modal="abrir">+ Novo Fornecedor</button>
+                </div>
+                <div class="fornecedor-container-alinhamento">
+                    <div class="fornecedor-container">
+                        <div class="input-search">
+                            <img src="assets/icons/search.svg" alt="buscar">
+                            <input type="text" placeholder="Buscar Fornecedor ou CNPJ...">
+                        </div>
 
-            <table class="fornecedor-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Polo</th>
-                        <th>Razão Social</th>
-                        <th>Nome Fantasia</th>
-                        <th>CNPJ</th>
-                        <th>Localidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Fabricante</td>
-                        <td>PharmaBrasil Ltda</td>
-                        <td><strong>PharmaBR</strong></td>
-                        <td>12.38.678/0001-01</td>
-                        <td>São Paulo - SP</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Distribuidor</td>
-                        <td>MedDistrubi S.A</td>
-                        <td><strong>MedDIST</strong></td>
-                        <td>98.765.432/001-02</td>
-                        <td>Rio de Janeiro - RJ</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fabricante</td>
-                        <td>BioSaúde Indústria</td>
-                        <td><strong>BioSaúde</strong></td>
-                        <td>11.222.333/001-03</td>
-                        <td>Belo Horizonte - MG</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Distribuidor</td>
-                        <td>Saúde Total Logistica</td>
-                        <td><strong>SaudeLog</strong></td>
-                        <td>44.555.666/001-04</td>
-                        <td>Curitiba - PR</td>
-                    </tr>
-                </tbody>
-            </table>
+                        <table class="fornecedor-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Polo</th>
+                                    <th>Razão Social</th>
+                                    <th>Nome Fantasia</th>
+                                    <th>CNPJ</th>
+                                    <th>Localidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if (empty($fornecedores)): ?>
+                                    <tr>
+                                        <td colspan="6" style="text-align:center">Nenhum fornecedor cadastrado.</td>
+                                    </tr>
+                                <?php else: ?>
+                                    <?php foreach ($fornecedores as $f): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($f['id']) ?></td>
+                                            <td><?= htmlspecialchars($f['polo']) ?></td>
+                                            <td><?= htmlspecialchars($f['razao_social']) ?></td>
+                                            <td><strong><?= htmlspecialchars($f['nome_fantasia']) ?></strong></td>
+                                            <td><?= htmlspecialchars($f['cnpj']) ?></td>
+                                            <td><?= htmlspecialchars($f['localidade']) ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
 
-         <?php include_once __DIR__ . "/../src/components/pagination.inc.php"; ?>
-        </main>
-        </div>
+                    <?php include_once __DIR__ . "/../src/components/pagination.inc.php"; ?>
+                </div>
+            </main>
         </div>
     </div>
 
       <section class="modal-container" data-modal="container">
       <div class="modal">
         <button data-modal="fechar" class="fechar">X</button>
-        <form action="">
+        <form action="/PHARMATECH_PROJETO/Pharmatech/back/public/index.php?acao=cadastrar_fornecedor" method="POST">
         <div class="input-modal">
             <div class="input-wrapper">
                 <label for="name">Razão Social</label>
-                <input type="text" for="name" id="name" placeholder="Ex: Pharma Brasil Ltda"/>
+                <input type="text" name="razao_social" for="name" id="name" placeholder="Ex: Pharma Brasil Ltda"/>
             </div>
             <div class="input-wrapper">
                 <label for="fantasia">Nome Fantasia</label>
-                <input type="text" for="fantasia" id="fantasia" placeholder="Ex: PharmaBR"/>
+                <input  name="nome_fantasia" type="text" for="fantasia" id="fantasia" placeholder="Ex: PharmaBR"/>
             </div>
                <div class="input-wrapper">
                 <label for="cnpj">CNPJ</label>
-                <input type="text" for="cnpj" id="cnpj" placeholder="00.000.000/00000"/>
+                <input name="cnpj" type="text" for="cnpj" id="cnpj" placeholder="00.000.000/00000"/>
             </div>
                <div class="input-wrapper">
                 <label for="polo">Polo</label>
-                <input type="text" for="polo" id="polo" placeholder="Selecione"/>
+                <input name="polo" type="text" for="polo" id="polo" placeholder="Selecione"/>
             </div>
             <div class="input-wrapper">
                 <label for="localidade">localidade</label>
-                <input type="text" for="localidade" id="localidade" placeholder="Ex: São Paulo - SP"/>
+                <input name="localidade" type="text" for="localidade" id="localidade" placeholder="Ex: São Paulo - SP"/>
             </div>
             <div class="input-wrapper">
                 <label for="status">status</label>
